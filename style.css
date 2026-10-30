@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "vazirB";
+  src: url("./Vazirmatn-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "vazirB", Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(135deg, #fce4ec, #f3e5f5, #e1bee7); */
+  background: linear-gradient(135deg, #003cffa4, #4c00ff, #ff0055);
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(245, 189, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(186, 104, 200, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  transition: all 0.5s ease;
+}
+
+.title {
+  color: #2a26ff;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #434343;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+button {
+  background: linear-gradient(135deg, #a238ff, #ff61bb);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: "vazirB", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(233, 30, 99, 0.4);
+}
+
+.message {
+  margin-top: 25px;
+  background: #ffdcef;
+  padding: 20px;
+  border-radius: 15px;
+  border-right: 4px solid #e91e63;
+  color: #4a148c;
+  line-height: 1.8;
+  font-size: 15px;
+  transition: all 0.6s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  height: 0;
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  height: auto;
+  margin-top: 25px;
+  padding: 20px;
+}
+
+/* انیمیشن برای ظاهر شدن کارت */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: floatIn 0.8s ease-out forwards;
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    width: 262px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  p,
+  span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  button {
+    width: 220px;
+    /* height: 44px; */
+    font-size: 11.5px;
+    padding: 15px 10px;
+  }
+}
